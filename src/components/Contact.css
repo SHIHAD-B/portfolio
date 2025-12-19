@@ -1,0 +1,196 @@
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--spacing-3xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.contact-info-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.contact-info-section>p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    line-height: 1.7;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.contact-info-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gradient);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.contact-info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-label {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-info-value {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.contact-info-value:hover {
+    color: var(--accent-primary);
+}
+
+.contact-social h4 {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.contact-social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.contact-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-radius: var(--radius-md);
+    font-size: 1.3rem;
+    transition: all var(--transition-fast);
+}
+
+.contact-social-link:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-2xl);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: var(--spacing-md);
+    background: var(--bg-tertiary);
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-tertiary);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn {
+    margin-top: var(--spacing-md);
+    width: 100%;
+}
+
+.contact-form .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-message {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-message.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.form-message.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+@media (max-width: 968px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: var(--spacing-lg);
+    }
+}

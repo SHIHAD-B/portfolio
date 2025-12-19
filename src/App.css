@@ -1,0 +1,35 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+section {
+  position: relative;
+}
+
+
+#about {
+  background: var(--bg-secondary);
+}
+
+#services {
+  background: var(--bg-secondary);
+}
+
+
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: var(--transition-base);
+  transition-timing-function: ease-in-out;
+}
+
+
+.no-transition * {
+  transition: none !important;
+}
